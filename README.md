@@ -26,10 +26,11 @@ https://hub.docker.com/r/mcandre/docker-multi-cc/
 $ make
 
 $ docker images | grep mcandre/docker-multi-cc
-mcandre/docker-multi-cc                opensuse            003c9510086c        23 seconds ago      381 MB
+mcandre/docker-multi-cc                busybox             1ebdf3e8483f        13 minutes ago      98.3 MB
+mcandre/docker-multi-cc                opensuse            003c9510086c        30 minutes ago      381 MB
 mcandre/docker-multi-cc                alpine              34bd112dbf57        About an hour ago   153 MB
-mcandre/docker-multi-cc                ubuntu              7396a7492c57        About an hour ago   265 MB
-mcandre/docker-multi-cc                debian              6431a82ca1d1        3 hours ago         319 MB
+mcandre/docker-multi-cc                ubuntu              7396a7492c57        2 hours ago         265 MB
+mcandre/docker-multi-cc                debian              6431a82ca1d1        4 hours ago         319 MB
 ```
 
 # PUBLISH IMAGES
