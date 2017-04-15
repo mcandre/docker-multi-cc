@@ -1,4 +1,2 @@
 FROM progrium/busybox
-RUN opkg-install \
-        make \
-        gcc \
+RUN opkg-install gcc
