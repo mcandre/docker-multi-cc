@@ -5,4 +5,5 @@ RUN zypper addrepo http://download.opensuse.org/repositories/home:Ledest:misc/op
     zypper install -y \
         musl-devel \
         dietlibc \
-        klibc-devel
+        klibc-devel \
+        uClibc-devel
