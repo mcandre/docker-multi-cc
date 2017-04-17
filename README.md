@@ -33,6 +33,7 @@ mcandre/docker-multi-cc                centos              1447db0453b0        8
 mcandre/docker-multi-cc                busybox             9ccc4c6337c5        11 minutes ago      98.1 MB
 mcandre/docker-multi-cc                alpine              3f601c41643e        13 minutes ago      101 MB
 mcandre/docker-multi-cc                debian              6431a82ca1d1        20 hours ago        319 MB
+mcandre/docker-multi-cc                arch                84cfc040bc7b        2 hours ago         898 MB
 ```
 
 # PUBLISH IMAGES
