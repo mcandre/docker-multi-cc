@@ -1,6 +1,6 @@
-.PHONY: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multicc-opensuse mcandre/docker-multi-cc-busybox mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch
+.PHONY: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multicc-opensuse mcandre/docker-multi-cc-busybox mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware
 
-all: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multi-cc-opensuse mcandre/docker-multi-cc-busybox mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch
+all: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multi-cc-opensuse mcandre/docker-multi-cc-busybox mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware
 
 mcandre/docker-multi-cc-debian: debian/Dockerfile
 	docker build -t mcandre/docker-multi-cc:debian debian
@@ -26,6 +26,9 @@ mcandre/docker-multi-cc-centos: centos/Dockerfile
 mcandre/docker-multi-cc-arch: arch/Dockerfile
 	docker build -t mcandre/docker-multi-cc:arch arch
 
+mcandre/docker-multi-cc-slackware: slackware/Dockerfile
+	docker build -t mcandre/docker-multi-cc:slackware slackware
+
 publish-debian: mcandre/docker-multi-cc-debian
 	docker push mcandre/docker-multi-cc:debian
 
@@ -50,4 +53,7 @@ publish-centos: mcandre/docker-multi-cc-centos
 publish-arch: mcandre/docker-multi-cc-arch
 	docker push mcandre/docker-multi-cc:arch
 
-publish: publish-debian publish-ubuntu publish-alpine publish-opensuse publish-busybox publish-fedora publish-centos publish-arch
+publish-slackware: mcandre/docker-multi-cc-slackware
+	docker push mcandre/docker-multi-cc:slackware
+
+publish: publish-debian publish-ubuntu publish-alpine publish-opensuse publish-busybox publish-fedora publish-centos publish-arch publish-slackware
