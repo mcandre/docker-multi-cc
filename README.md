@@ -12,6 +12,8 @@ Most Linux distributions run GNU libc binaries and target GNU libc by default in
 
 Note: Once an application is compiled, the runtime container does not need a full gcc installation. Instead, a much smaller base image like [busybox](https://hub.docker.com/_/busybox/) can run the application. See `busybox:glibc`, `busybox:musl`, `busybox:uclibc` tags for the different libc's imported by your application.
 
+If the application is compiled completely statically, including the libc, then the application can be run from a base image `scratch` starting at size zero bytes, however there are often security hazards to statically linking any libc, so beware!
+
 # EXAMPLE
 
 ```console
