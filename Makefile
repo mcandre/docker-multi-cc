@@ -1,6 +1,6 @@
-.PHONY: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multicc-opensuse mcandre/docker-multi-cc-busybox mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware mcandre/docker-multi-cc-mageia mcandre/docker-multi-cc-openwrt
+.PHONY: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multicc-opensuse mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware mcandre/docker-multi-cc-mageia mcandre/docker-multi-cc-openwrt
 
-all: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multi-cc-opensuse mcandre/docker-multi-cc-busybox mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware mcandre/docker-multi-cc-mageia mcandre/docker-multi-cc-openwrt
+all: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multi-cc-opensuse mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware mcandre/docker-multi-cc-mageia mcandre/docker-multi-cc-openwrt
 
 mcandre/docker-multi-cc-debian: debian/Dockerfile
 	docker build -t mcandre/docker-multi-cc:debian debian
@@ -13,9 +13,6 @@ mcandre/docker-multi-cc-alpine: alpine/Dockerfile
 
 mcandre/docker-multi-cc-opensuse: opensuse/Dockerfile
 	docker build -t mcandre/docker-multi-cc:opensuse opensuse
-
-mcandre/docker-multi-cc-busybox: busybox/Dockerfile
-	docker build -t mcandre/docker-multi-cc:busybox busybox
 
 mcandre/docker-multi-cc-fedora: fedora/Dockerfile
 	docker build -t mcandre/docker-multi-cc:fedora fedora
@@ -47,9 +44,6 @@ publish-alpine: mcandre/docker-multi-cc-alpine
 publish-opensuse: mcandre/docker-multi-cc-opensuse
 	docker push mcandre/docker-multi-cc:opensuse
 
-publish-busybox: mcandre/docker-multi-cc-busybox
-	docker push mcandre/docker-multi-cc:busybox
-
 publish-fedora: mcandre/docker-multi-cc-fedora
 	docker push mcandre/docker-multi-cc:fedora
 
@@ -68,4 +62,4 @@ publish-mageia: mcandre/docker-multi-cc-mageia
 publish-openwrt: mcandre/docker-multi-cc-openwrt
 	docker push mcandre/docker-multi-cc:openwrt
 
-publish: publish-debian publish-ubuntu publish-alpine publish-opensuse publish-busybox publish-fedora publish-centos publish-arch publish-slackware pubilsh-mageia publish-openwrt
+publish: publish-debian publish-ubuntu publish-alpine publish-opensuse publish-fedora publish-centos publish-arch publish-slackware publish-mageia publish-openwrt

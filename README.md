@@ -1,5 +1,14 @@
 # mcandre/docker-multi-cc: Docker images for building alt-libc applications
 
+# ABOUT
+
+The included base images serve as an example of how to install C compiler toolchains, for various Linux flavors.
+
+Most Linux distributions run GNU libc binaries and target GNU libc by default in gcc. Other distributions are notable for supporting alternative libc's:
+
+* Alpine: musl
+* OpenWrt: uClibc
+
 # EXAMPLE
 
 ```console
@@ -32,7 +41,6 @@ mcandre/docker-multi-cc                opensuse            4eefc910fa32        4
 mcandre/docker-multi-cc                openwrt             20e50b5a1969        40 minutes ago      75.4MB
 mcandre/docker-multi-cc                centos              1447db0453b0        8 minutes ago       297 MB
 mcandre/docker-multi-cc                mageia              d39eeecc4998        8 minutes ago       322 MB
-mcandre/docker-multi-cc                busybox             2ae9558e9e8e        4 seconds ago       71.1 MB
 mcandre/docker-multi-cc                alpine              3f601c41643e        13 minutes ago      101 MB
 mcandre/docker-multi-cc                debian              6431a82ca1d1        20 hours ago        319 MB
 mcandre/docker-multi-cc                arch                84cfc040bc7b        2 hours ago         898 MB
