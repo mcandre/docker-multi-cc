@@ -29,6 +29,7 @@ $ docker images | grep multi-cc
 mcandre/docker-multi-cc                fedora              3607949c5256        2 minutes ago       407 MB
 mcandre/docker-multi-cc                ubuntu              f483c3a80000        3 minutes ago       145 MB
 mcandre/docker-multi-cc                opensuse            4eefc910fa32        4 minutes ago       346 MB
+mcandre/docker-multi-cc                openwrt             20e50b5a1969        40 minutes ago      75.4MB
 mcandre/docker-multi-cc                centos              1447db0453b0        8 minutes ago       297 MB
 mcandre/docker-multi-cc                mageia              d39eeecc4998        8 minutes ago       322 MB
 mcandre/docker-multi-cc                busybox             2ae9558e9e8e        4 seconds ago       71.1 MB
