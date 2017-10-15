@@ -4,10 +4,13 @@
 
 The included base images serve as an example of how to install C compiler toolchains, for various Linux flavors.
 
-Most Linux distributions run GNU libc binaries and target GNU libc by default in gcc. Other distributions are notable for supporting alternative libc's:
+Most Linux distributions run GNU libc binaries and target GNU libc by default in gcc. Other distributions are notable for supporting compilation targeting alternative libc's:
 
+* Debian: GNU glibc
 * Alpine: musl
 * OpenWrt: uClibc
+
+Note: Once an application is compiled, the runtime container does not need a full gcc installation. Instead, a much smaller base image like [busybox](https://hub.docker.com/_/busybox/) can run the application. See `busybox:glibc`, `busybox:musl`, `busybox:uclibc` tags for the different libc's imported by your application.
 
 # EXAMPLE
 
