@@ -4,4 +4,6 @@ RUN apt-get update && \
         build-essential \
         musl-tools \
         dietlibc-dev \
-        libklibc-dev
+        libklibc-dev && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
