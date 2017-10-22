@@ -1,4 +1,4 @@
-FROM fedora:25
+FROM library/fedora:25
 RUN dnf update -y && \
     dnf install -y dnf-plugins-core && \
     dnf copr -y enable ngompa/musl-libc && \
