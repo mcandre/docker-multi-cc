@@ -40,6 +40,7 @@ https://hub.docker.com/r/mcandre/docker-multi-cc/
 $ make
 
 $ docker images | grep multi-cc
+mcandre/docker-multi-cc                void                f06e5cb4b06a        7 minutes ago       451MB
 mcandre/docker-multi-cc                fedora              3607949c5256        2 minutes ago       407 MB
 mcandre/docker-multi-cc                ubuntu              f483c3a80000        3 minutes ago       145 MB
 mcandre/docker-multi-cc                opensuse            4eefc910fa32        4 minutes ago       346 MB

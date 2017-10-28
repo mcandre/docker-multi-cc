@@ -1,6 +1,6 @@
-.PHONY: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multicc-opensuse mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware mcandre/docker-multi-cc-mageia mcandre/docker-multi-cc-openwrt
+.PHONY: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multicc-opensuse mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware mcandre/docker-multi-cc-mageia mcandre/docker-multi-cc-openwrt mcandre/docker-multi-cc-void
 
-all: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multi-cc-opensuse mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware mcandre/docker-multi-cc-mageia mcandre/docker-multi-cc-openwrt
+all: mcandre/docker-multi-cc-debian mcandre/docker-multi-cc-ubuntu mcandre/docker-multi-cc-alpine mcandre/docker-multi-cc-opensuse mcandre/docker-multi-cc-fedora mcandre/docker-multi-cc-centos mcandre/docker-multi-cc-arch mcandre/docker-multi-cc-slackware mcandre/docker-multi-cc-mageia mcandre/docker-multi-cc-openwrt mcandre/docker-multi-cc-void
 
 mcandre/docker-multi-cc-debian: debian/Dockerfile
 	docker build -t mcandre/docker-multi-cc:debian debian
@@ -32,6 +32,9 @@ mcandre/docker-multi-cc-mageia: mageia/Dockerfile
 mcandre/docker-multi-cc-openwrt: openwrt/Dockerfile
 	docker build -t mcandre/docker-multi-cc:openwrt openwrt
 
+mcandre/docker-multi-cc-void: void/Dockerfile
+	docker build -t mcandre/docker-multi-cc:void void
+
 publish-debian: mcandre/docker-multi-cc-debian
 	docker push mcandre/docker-multi-cc:debian
 
@@ -62,4 +65,7 @@ publish-mageia: mcandre/docker-multi-cc-mageia
 publish-openwrt: mcandre/docker-multi-cc-openwrt
 	docker push mcandre/docker-multi-cc:openwrt
 
-publish: publish-debian publish-ubuntu publish-alpine publish-opensuse publish-fedora publish-centos publish-arch publish-slackware publish-mageia publish-openwrt
+publish-void: mcandre/docker-multi-cc-void
+	docker push mcandre/docker-multi-cc:void
+
+publish: publish-debian publish-ubuntu publish-alpine publish-opensuse publish-fedora publish-centos publish-arch publish-slackware publish-mageia publish-openwrt publish-void
